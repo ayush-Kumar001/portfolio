@@ -303,6 +303,52 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 
+/* services section styling */
+.services{
+    color:#fff;
+    background: #111;
+}
+.services .title::before,
+.title::before{
+    background: #fff;
+}
+.services .title::after,
+.title::after{
+    background: #111;
+    content: "what i am doing";
+}
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover{
+    background: crimson;
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.services .serv-content .card:hover i{
+    color: #fff;
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
 /* skills section styling */
 
 .skills .title::after{
@@ -381,31 +427,49 @@ section .title::after{
 
 /* teams section styling */
 
+.teams{
+    color:#fff;
+    background: #111;
+}
+.teams .title::before,
+.title::before{
+    background: #fff;
+}
+.teams .title::after,
+.title::after{
+    background: #111;
+    content: "what i achieved";
+}
+.teams .carousel .card{
+    width: calc(- 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 .teams .carousel .card:hover{
     background: crimson;
 }
 .teams .carousel .card .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover .box{
     transform: scale(1.05);
 }
+.teams .carousel .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.teams .carousel .card:hover i{
+    color: #fff;
+}
 .teams .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
-}
-.teams .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid crimson;
-    transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img{
     border-color: #fff;
