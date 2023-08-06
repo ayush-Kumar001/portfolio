@@ -63,4 +63,49 @@ $(document).ready(function(){
             }
         }
     });
+
+     // Retrieve the like count from local storage if it exists
+     let likeCount = parseInt(localStorage.getItem("likeCount")) || 0;
+     let toggleState = 0; // Initialize the toggle state (0 means increment, 1 means decrement)
+ 
+     // Update the like count on page load
+     updateLikeCount();
+ 
+     // Handle like button click
+     $('#like-button').click(function() {
+         if (toggleState === 0) {
+             // Increment the like count
+             likeCount++;
+             // Set the toggle state to 1 (next click will decrement)
+             toggleState = 1;
+         } else {
+             // Decrement the like count
+             likeCount--;
+             // Set the toggle state back to 0 (next click will increment)
+             toggleState = 0;
+         }
+ 
+         // Store the updated like count in local storage
+         localStorage.setItem("likeCount", likeCount);
+         updateLikeCount();
+     });
+ 
+     // Your existing code for sticky navbar, scroll-up button, menu/navbar, typing text animation, and owl carousel...
+     
+     function updateLikeCount() {
+         const likeCountElement = document.getElementById("like-count");
+         likeCountElement.textContent = likeCount;
+     }
+ 
+     // Helper function to handle cookies
+     function setCookie(name, value, days) {
+         let expires = "";
+         if (days) {
+             const date = new Date();
+             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+             expires = "; expires=" + date.toUTCString();
+         }
+         document.cookie = name + "=" + (value || "") + expires + "; path=/";
+     }
 });
+
