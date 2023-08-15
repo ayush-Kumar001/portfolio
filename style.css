@@ -788,3 +788,9 @@ footer span a:hover{
     font-weight: 600;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
+
+  #like-button:active {
+    background-color: #e11f1f; /* Change this to the desired color */
+    color: white; /* Change text color to make it visible */
+
+}
